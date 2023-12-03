@@ -39,7 +39,7 @@ public class PokerHand implements Comparable<PokerHand> {
                 firstGrade = STRAIGHT_FLUSH;
                 kickers.addAll(uniqueCards);
             }
-        } else if (maxIdentic == 4) {
+        } else if (maxIdentic == 4||maxIdentic == 5) {
             firstGrade = FOUR_OF_A_KIND;
             kickers.addAll(getCardsInWeightOrder());
         } else if (maxIdentic == 3 && uniqueNumbersCount == 2) {

@@ -73,6 +73,18 @@ public class PokerHandTest {
     }
 
     @Test
+    public void testFiveCardsWithoutFlush() {
+        PokerHand hand = new PokerHand("QS QS QS QS QD");
+        assertEquals(FOUR_OF_A_KIND, hand.firstGrade);
+    }
+
+    @Test
+    public void testFiveSomeCards() {
+        PokerHand hand = new PokerHand("QS QS QS QS QS");
+        assertEquals(FOUR_OF_A_KIND, hand.firstGrade);
+    }
+
+    @Test
     public void testSortPokerHands() {
         ArrayList<PokerHand> hands = new ArrayList<>();
 
